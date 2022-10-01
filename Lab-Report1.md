@@ -24,7 +24,7 @@
 - To do this you must use the following command structure
 - scp WhereAmI.java cs15lfa22zz@ieng6.ucsd.edu:~/
 - In this example you can see that WhereAmI.java is the file we are coping and that at the end we have the directory we are coping it over too
-- ![Image](SCP.png)
+![Image](SCP.png)
 
 # SSH Keys
 - Create an ssh key by using the command ssh-keygen and setting the path to the key to be /Users/[Your Username]/.ssh/id_rsa
@@ -34,7 +34,7 @@
 - After that you will scp the key into that directory 
 - scp /Users/[Your Username]/.ssh/id_rsa.pub cs15lfa22gx@ieng6.ucsd.edu:~/.ssh/authorized_keys
 - Now you should be able to access the remote desktop without using a password
-- ![Image](sshkeys.png)
+![Image](sshkeys.png)
 
 # Optimizing Remote Running
 - Now you can run commands directly onto the remote desktop by using quotes around the command
@@ -42,5 +42,5 @@
 - You can also use semicolons to run multiple commands from the same line
 - cp WhereAmI.java OtherMain.java; javac OtherMain.java; java WhereAmI
 - Using these methods will make it easier to run commands in the terminals
-- ![Image](easier_remote.png)
+![Image](easier_remote.png)
 
