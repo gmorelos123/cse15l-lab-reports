@@ -17,7 +17,7 @@
 - cp copies files from a directory to a different directory that you set
 - cat prints a files contents
 - To logout from the PC you must use exit or Ctrl + D
-![Image](/main/commands.png)
+![Image](commands.PNG)
 
 # Moving files with SCP
 - You can use the scp command to move files over to the remote desktop
