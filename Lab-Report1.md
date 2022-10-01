@@ -1,7 +1,7 @@
 # Installing VScode
 - Go to the VScode website to the download page.
 - Download VScode and ensure you can open the terminal inside of it by pressing Ctrl + `
-- !(file:///C:/Users/German/Pictures/commands.PNG)
+- ![Image](/Users/German/Pictures/commands.PNG)
 
 # Remotely Connecting
 - Now to remote connect you must use the [account lookup](https://sdacs.ucsd.edu/~icc/index.php) and install [OpenSSH](https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse?tabs=gui)
