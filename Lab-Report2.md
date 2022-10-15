@@ -4,10 +4,6 @@
 
 
 `
-{
-import java.io.IOException;
-import java.net.URI;
-
 class Handler implements URLHandler {
     // The one bit of state on the server: a number that will be manipulated by
     // various requests.
@@ -44,7 +40,8 @@ class Handler implements URLHandler {
         }
     }
 }
-
+`
+`
 class SearchEngine {
     public static void main(String[] args) throws IOException {
         if(args.length == 0){
@@ -56,7 +53,6 @@ class SearchEngine {
 
         Server.start(port, new Handler());
     }
-}
 }
 `
 
@@ -77,6 +73,8 @@ class SearchEngine {
 - These methods are used to not change any values but instead to search the string `s` to see if it contains the certain characters which are `app` in this case
 - The query then searches through the list using `.split` and a for loop to print out a new string that only contains words with the characters
 - This query does not change `s` it will still contain both hello and pineapple but only pineapple will print since it meets the requirements for it to be printed
+
+
 ![Image](search.PNG)
 
 # Part 2: Symptoms and Failure-inducing Inputs
