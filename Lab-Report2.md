@@ -3,7 +3,7 @@
 - Here is my code for my SearchEngine
 
 
-`
+```
 class Handler implements URLHandler {
     // The one bit of state on the server: a number that will be manipulated by
     // various requests.
@@ -40,8 +40,8 @@ class Handler implements URLHandler {
         }
     }
 }
-`
-`
+
+
 class SearchEngine {
     public static void main(String[] args) throws IOException {
         if(args.length == 0){
@@ -54,7 +54,7 @@ class SearchEngine {
         Server.start(port, new Handler());
     }
 }
-`
+```
 
 - This Screenshot shows the addition of the word hello onto the list of strings
 - When running the URL the methods `getPath() .equals() and .format()` are called to get to the page 
@@ -80,7 +80,7 @@ class SearchEngine {
 # Part 2: Symptoms and Failure-inducing Inputs
 
 - In the method `reverseInPlace` for the ArrayExamples the code would not work when you inputed an array with any number of elements
-`
+```
 public class ArrayTests {
 	@Test 
 	public void testReverseInPlace() {
@@ -97,18 +97,18 @@ public class ArrayTests {
     assertArrayEquals(new int[]{6,4,1,2}, input3);
 
 	}
-`
+```
 - The method `reverseInPlace` has a bug where it only reverses one half of the list
 - For example if the list was `{1,2,3,4,5}` it will return `{5,4,3,4,5}`
-`
+```
 static void reverseInPlace(int[] arr) {
     for(int i = 0; i < arr.length; i += 1) {
       arr[i] = arr[arr.length - i - 1]; // This is where the bug happens
     }
   }
- ` 
+ ```
  - We will have to create a temp variable to be able to switch the variables and reverse the order which can be seen in the code below
-`
+```
 static void reverseInPlace(int[] arr) {
     int c = 0;
     for(int i = 0; i < arr.length/2 ; i += 1) {
@@ -118,7 +118,7 @@ static void reverseInPlace(int[] arr) {
     }
     
   }
- `
+ ```
  
  - This bug clearly does not have anything to store the old values that it switches and only uses the same array to determine the changes
  - Since it needs to have somewhere to store the values it will not be able to reverse since the arr will end up having values that equal each other
@@ -127,7 +127,8 @@ static void reverseInPlace(int[] arr) {
 - The method `filter` in the ListExamples has a bug 
 - These are the tests that are ran to create a bug
 
-`import static org.junit.Assert.*;
+```
+import static org.junit.Assert.*;
 import org.junit.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -159,11 +160,12 @@ public class ListTests{
 
 }
  
- `
+```
  
 - This is the code with the bug
 
-`static List<String> filter(List<String> list, StringChecker sc) {
+```
+static List<String> filter(List<String> list, StringChecker sc) {
     List<String> result = new ArrayList<>();
     for(String s: list) {
       if(sc.checkString(s)) {
@@ -172,10 +174,10 @@ public class ListTests{
     }
     return result;
   }
-  `
+  ```
 - This is the code that fixes the bug
 
-`
+```
 static List<String> filter(List<String> list, StringChecker sc) {
     List<String> result = new ArrayList<>();
     for(String s: list) {
@@ -185,7 +187,7 @@ static List<String> filter(List<String> list, StringChecker sc) {
     }
     return result;
   }
- `
+ ```
  - In this situation it is a very simple mistake that is causing the bug
  - The point of the method is to keep the same order of which the filter is made with `checkString`
  - The problem is that the original code inserts the strings in the front instead of adding any new strings to the back of the list to keep the same order
