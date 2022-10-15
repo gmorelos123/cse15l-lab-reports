@@ -4,6 +4,7 @@
 
 
 `
+{
 import java.io.IOException;
 import java.net.URI;
 
@@ -56,6 +57,7 @@ class SearchEngine {
         Server.start(port, new Handler());
     }
 }
+}
 `
 
 - This Screenshot shows the addition of the word hello onto the list of strings
@@ -63,13 +65,13 @@ class SearchEngine {
 - After these methods run and show the page the values for the string changes in this case `s = hello` which means s contains hello inside of it
 - The word was added onto the list and is stored within the program
 ![Image](add1.PNG)
-
+---
 - This Screenshot shows the addition of the word pineapple onto the list of strings
 - It does the same thing as the previous screenshot with adding the word pineapple onto the string
 - Calling the same methods to determine how it will be added using `getPath() .equals() and .format()` and also using `s += parameters[1] + ",";` to add into the string list
 - This changes the value of `s` to contain both the word hello and pineapple which makes `s = hello,pineapple`
 ![Image](add2.PNG)
-
+---
 - This Screenshot shows the query `/search` being used to search for certain characters in the list
 - In this query the methods that are called are `.getQuery() .equals() .getPath() and .split()` 
 - These methods are used to not change any values but instead to search the string `s` to see if it contains the certain characters which are `app` in this case
