@@ -100,6 +100,8 @@ public class ArrayTests {
 ```
 - The method `reverseInPlace` has a bug where it only reverses one half of the list
 - For example if the list was `{1,2,3,4,5}` it will return `{5,4,3,4,5}`
+
+
 ```
 static void reverseInPlace(int[] arr) {
     for(int i = 0; i < arr.length; i += 1) {
@@ -107,7 +109,11 @@ static void reverseInPlace(int[] arr) {
     }
   }
  ```
+ 
+ 
  - We will have to create a temp variable to be able to switch the variables and reverse the order which can be seen in the code below
+
+
 ```
 static void reverseInPlace(int[] arr) {
     int c = 0;
@@ -120,9 +126,10 @@ static void reverseInPlace(int[] arr) {
   }
  ```
  
- - This bug clearly does not have anything to store the old values that it switches and only uses the same array to determine the changes
- - Since it needs to have somewhere to store the values it will not be able to reverse since the arr will end up having values that equal each other
+- This bug clearly does not have anything to store the old values that it switches and only uses the same array to determine the changes
+- Since it needs to have somewhere to store the values it will not be able to reverse since the arr will end up having values that equal each other
 
+---
 
 - The method `filter` in the ListExamples has a bug 
 - These are the tests that are ran to create a bug
